@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   grafana:
     image: grafana/grafana
@@ -13,11 +13,11 @@ services:
       - GF_USERS_ALLOW_SIGN_UP=true
       - GF_ALERTING_ERROR_OR_TIMEOUT=keep_state
     restart: always
-    depends_on:
-      - mysqlsrv
+    # depends_on:
+    #   - mysqlsrv
   influxdb:
     image: influxdb
     ports:
-    - "8083:8083"
-    - "8086:8086"
-    - "8090:8090"
+      - "8083:8083"
+      - "8086:8086"
+      - "8090:8090"
